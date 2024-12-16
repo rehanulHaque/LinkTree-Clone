@@ -1,5 +1,3 @@
-"use server"
-
 import { User } from "@/models/userModel"
 
 export async function deleteLink(id: string){

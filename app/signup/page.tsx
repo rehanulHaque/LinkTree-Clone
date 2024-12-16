@@ -33,7 +33,7 @@ export default async function SignUp() {
         <CardFooter className="flex flex-col gap-3 mt-2">
           <form action={async()=>{
             "use server"
-            await signIn("google")
+            await signIn("google", {callbackUrl: "/home"})
           }}>
             <Button variant={"outline"}>
               <FaGoogle className="mr-2" /> Signup with Google

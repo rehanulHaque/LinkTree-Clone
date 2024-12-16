@@ -18,10 +18,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Navbar/>
+      {/* <body className={`${inter.className} grid grid-cols-6`}> */}
+      <body className={`${inter.className}`}>
+        {/* <div>
+          <Navbar />
+        </div>
+        <div className="col-span-5">
+          {children} <Toaster />
+        </div> */}
         {children}
-        <Toaster/>
       </body>
     </html>
   );

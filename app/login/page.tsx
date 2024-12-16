@@ -14,7 +14,7 @@ import { FaGoogle } from "react-icons/fa";
 
 export default async function Login() {
   const session = await auth()
-  if(session?.user) redirect("/")
+  if(session?.user) redirect("/home")
   return (
     <main className="h-screen flex items-center justify-center ">
       <Card>
@@ -33,7 +33,7 @@ export default async function Login() {
           <form
             action={async () => {
               "use server";
-              await signIn("google");
+              await signIn("google", { callbackUrl: "/home" });
             }}
           >
             <Button variant={"outline"}>

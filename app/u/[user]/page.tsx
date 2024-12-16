@@ -21,7 +21,7 @@ export default async function UserProfile({ params }: ParamsProps) {
   const user = await User.findOne({ name: params.user });
 
   return (
-    <main className="h-screen flex flex-col items-center justify-center">
+    <main className="h-screen flex flex-col items-center justify-center new-background text-white">
       <div>
         <Image
           src={user.avatar}
@@ -44,7 +44,7 @@ export default async function UserProfile({ params }: ParamsProps) {
             href={link.url}
             target="_blank"
             key={link._id}
-            className="bg-slate-200 py-2 px-4 rounded-md flex justify-between w-[500px] items-center hover:scale-105 transition-all"
+            className="bg-slate-300 text-black py-2 px-4 rounded-md flex justify-between w-[500px] items-center hover:scale-105 transition-all"
           >
             <Image
               src="/batman.jpg"
